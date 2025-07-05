@@ -1,0 +1,6 @@
+{
+  "name": "npm-package-a",
+  "version": "0.1.0",
+  "main": "index.js",
+  "packageManager": "pnpm@10.12.1"
+}
