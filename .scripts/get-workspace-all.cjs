@@ -8,7 +8,8 @@ const getWorkspaceRs = require("./get-workspace-rs.cjs");
 const getWorkspaceJs = require("./get-workspace-js.cjs");
 
 const baseConfig = {
-  gitSiteUrl: "https://github.com/fltsci/fltsci/",
+  gitSiteUrl:
+    "https://github.com/johncarmack1984/my-automated-covector-config/",
   pkgManagers: {
     javascript: {
       version: true,
