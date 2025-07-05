@@ -1,0 +1,34 @@
+{
+  "gitSiteUrl": "https://github.com/fltsci/fltsci/",
+  "pkgManagers": {
+    "javascript": {
+      "version": true,
+      "getPublishedVersion": "git tag -l --sort=-v:refname \"${ pkg.pkg }-v${ pkgFile.version }\" | sed s/${ pkg.pkg }-v//",
+      "publish": ["echo \"Publishing ${ pkg.pkg }-v${ pkgFile.version }\""],
+      "releaseTag": "${ pkg.pkg }-v${ pkgFile.version }"
+    },
+    "rust": {
+      "version": true,
+      "getPublishedVersion": "git tag -l --sort=-v:refname \"${ pkg.pkg }-v${ pkgFile.version }\" | sed s/${ pkg.pkg }-v//",
+      "publish": ["echo \"Publishing ${ pkg.pkg }-v${ pkgFile.version }\""],
+      "releaseTag": "${ pkg.pkg }-v${ pkgFile.version }"
+    }
+  },
+  "packages": {
+    "npm-package-a": {
+      "path": "./npm-package-a",
+      "manager": "javascript",
+      "dependencies": []
+    },
+    "rust-package-a": {
+      "path": "./rust-package-a",
+      "manager": "rust",
+      "dependencies": []
+    },
+    "rust-package-b": {
+      "path": "./rust-package-b",
+      "manager": "rust",
+      "dependencies": ["rust-package-a"]
+    }
+  }
+}
